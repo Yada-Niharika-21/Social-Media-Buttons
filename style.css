@@ -1,0 +1,126 @@
+body {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    position: relative;
+    overflow: hidden;
+}
+.bg-shapes {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    pointer-events: none;
+}
+.bg-shape {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.12;
+    filter: blur(8px);
+    animation: floatShape 16s linear infinite alternate;
+}
+.bg-shape1 {
+    width: 400px; height: 400px; background: #ffecd2; left: 5vw; top: 10vh; animation-delay: 0s; }
+.bg-shape2 {
+    width: 300px; height: 300px; background: #fcb69f; right: 10vw; top: 20vh; animation-delay: 2s; }
+.bg-shape3 {
+    width: 250px; height: 250px; background: #a1c4fd; left: 30vw; bottom: 5vh; animation-delay: 4s; }
+.bg-shape4 {
+    width: 350px; height: 350px; background: #c2e9fb; right: 20vw; bottom: 10vh; animation-delay: 6s; }
+@keyframes floatShape {
+    0% { transform: translateY(0) scale(1); }
+    100% { transform: translateY(-40px) scale(1.08); }
+}
+.bg-message {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #fff;
+    background: linear-gradient(90deg, #64ffda 0%, #1da1f2 100%);
+    padding: 0.5em 2em;
+    border-radius: 2em;
+    box-shadow: 0 4px 24px rgba(100,255,218,0.15);
+    letter-spacing: 0.2em;
+    white-space: nowrap;
+    z-index: 1;
+    user-select: none;
+    pointer-events: none;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+    animation: fadeIn 2s;
+    opacity: 0.95;
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+.social-buttons {
+    display: flex;
+    gap: 20px;
+    width: 320px;
+    height: 320px;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+.social-buttons a {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-decoration: none;
+}
+.social-buttons a:nth-child(1) { transform: translate(-50%, -50%) rotate(0deg) translate(140px) rotate(0deg); }
+.social-buttons a:nth-child(2) { transform: translate(-50%, -50%) rotate(30deg) translate(140px) rotate(-30deg); }
+.social-buttons a:nth-child(3) { transform: translate(-50%, -50%) rotate(60deg) translate(140px) rotate(-60deg); }
+.social-buttons a:nth-child(4) { transform: translate(-50%, -50%) rotate(90deg) translate(140px) rotate(-90deg); }
+.social-buttons a:nth-child(5) { transform: translate(-50%, -50%) rotate(120deg) translate(140px) rotate(-120deg); }
+.social-buttons a:nth-child(6) { transform: translate(-50%, -50%) rotate(150deg) translate(140px) rotate(-150deg); }
+.social-buttons a:nth-child(7) { transform: translate(-50%, -50%) rotate(180deg) translate(140px) rotate(-180deg); }
+.social-buttons a:nth-child(8) { transform: translate(-50%, -50%) rotate(210deg) translate(140px) rotate(-210deg); }
+.social-buttons a:nth-child(9) { transform: translate(-50%, -50%) rotate(240deg) translate(140px) rotate(-240deg); }
+.social-buttons a:nth-child(10) { transform: translate(-50%, -50%) rotate(270deg) translate(140px) rotate(-270deg); }
+.social-buttons a:nth-child(11) { transform: translate(-50%, -50%) rotate(300deg) translate(140px) rotate(-300deg); }
+.social-buttons a:nth-child(12) { transform: translate(-50%, -50%) rotate(330deg) translate(140px) rotate(-330deg); }
+.social-btn {
+    width: 60px;
+    height: 60px;
+    background: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    color: #fff;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+    position: relative;
+}
+.social-btn.facebook { background: #3b5998; }
+.social-btn.twitter { background: #1da1f2; }
+.social-btn.instagram { background: #e4405f; }
+.social-btn.linkedin { background: #0077b5; }
+.social-btn.snapchat { background: #fffc00; color: #000; }
+.social-btn.threads { background: #000; color: #fff; }
+.social-btn.telegram { background: #229ED9; color: #fff; }
+.social-btn.whatsapp { background: #25D366; color: #fff; }
+.social-btn.email { background: #c71610; color: #fff; }
+.social-btn.youtube { background: #ff0000; color: #fff; }
+.social-btn.google { background: #4285F4; color: #fff; }
+.social-btn.messenger { background: #0084FF; color: #fff; }
+.social-btn:hover {
+    transform: scale(1.15) rotate(-5deg);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+}
+.social-btn i {
+    pointer-events: none;
+}
